@@ -7,21 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FD5DDDF5A43386DF94E11A5 /* Pods_MidtermProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23017BEA105A3065B14B783 /* Pods_MidtermProject.framework */; };
+		5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */; };
+		5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */; };
+		5AF9127C1FCF347900CEBFF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */; };
+		5AF9127E1FCF39C200CEBFF8 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */; };
+		5AF912801FCF3BD000CEBFF8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9127F1FCF3BD000CEBFF8 /* RegistrationViewController.swift */; };
 		5D09A8801FABFC1C002B47D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A87F1FABFC1C002B47D2 /* AppDelegate.swift */; };
-		5D09A8821FABFC1C002B47D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A8811FABFC1C002B47D2 /* ViewController.swift */; };
 		5D09A8851FABFC1C002B47D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8831FABFC1C002B47D2 /* Main.storyboard */; };
 		5D09A8871FABFC1C002B47D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8861FABFC1C002B47D2 /* Assets.xcassets */; };
 		5D09A88A1FABFC1C002B47D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8881FABFC1C002B47D2 /* LaunchScreen.storyboard */; };
+		5D09A8961FAC07B8002B47D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A8951FAC07B8002B47D2 /* HomeViewController.swift */; };
+		5D09A8981FAC0A29002B47D2 /* finkle trucking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8971FAC0A29002B47D2 /* finkle trucking.jpg */; };
+		5D09A8A01FAC15A8002B47D2 /* icons8-home-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A89F1FAC15A8002B47D2 /* icons8-home-3.png */; };
+		5D09A8A21FAC1607002B47D2 /* addressBook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8A11FAC1606002B47D2 /* addressBook.png */; };
+		5D09A8A41FAC1615002B47D2 /* addList.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8A31FAC1615002B47D2 /* addList.png */; };
+		5D09A8A81FAC2D1D002B47D2 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A8A71FAC2D1D002B47D2 /* ContactTableViewController.swift */; };
+		5D09A8AC1FACBC5E002B47D2 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */; };
+		5D09A8AE1FACBC7D002B47D2 /* CompanyContacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8AD1FACBC7D002B47D2 /* CompanyContacts.json */; };
+		5DD438B51FB0167A006C462B /* Junior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438B41FB0167A006C462B /* Junior.jpg */; };
+		5DD438B71FB01CD6006C462B /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438B61FB01CD6006C462B /* map-pin.png */; };
+		5DD438B91FB01DEF006C462B /* TerminalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD438B81FB01DEF006C462B /* TerminalsViewController.swift */; };
+		5DD438BB1FB01E15006C462B /* icons8-usa-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438BA1FB01E14006C462B /* icons8-usa-map.png */; };
+		5DD438BD1FB01F49006C462B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438BC1FB01F49006C462B /* Info.plist */; };
+		5DD438F61FB03E60006C462B /* EmploymentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD438F51FB03E60006C462B /* EmploymentFormViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5DEB41421FAD80AD00FD37C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		28392894863DE420AACCB3C9 /* Pods-MidtermProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidtermProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject.debug.xcconfig"; sourceTree = "<group>"; };
+		52CF0B08D80425A12B5C7055 /* Pods-MidtermProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidtermProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject.release.xcconfig"; sourceTree = "<group>"; };
+		5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewController.swift; sourceTree = "<group>"; };
+		5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
+		5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		5AF9127F1FCF3BD000CEBFF8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		5D09A87C1FABFC1C002B47D2 /* MidtermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidtermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D09A87F1FABFC1C002B47D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D09A8811FABFC1C002B47D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D09A8841FABFC1C002B47D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D09A8861FABFC1C002B47D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D09A8891FABFC1C002B47D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5D09A88B1FABFC1C002B47D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D09A8951FAC07B8002B47D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D09A8971FAC0A29002B47D2 /* finkle trucking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "finkle trucking.jpg"; sourceTree = "<group>"; };
+		5D09A89F1FAC15A8002B47D2 /* icons8-home-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-home-3.png"; sourceTree = "<group>"; };
+		5D09A8A11FAC1606002B47D2 /* addressBook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addressBook.png; sourceTree = "<group>"; };
+		5D09A8A31FAC1615002B47D2 /* addList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addList.png; sourceTree = "<group>"; };
+		5D09A8A71FAC2D1D002B47D2 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		5D09A8AD1FACBC7D002B47D2 /* CompanyContacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyContacts.json; sourceTree = "<group>"; };
+		5DD438B41FB0167A006C462B /* Junior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Junior.jpg; sourceTree = SOURCE_ROOT; };
+		5DD438B61FB01CD6006C462B /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
+		5DD438B81FB01DEF006C462B /* TerminalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalsViewController.swift; sourceTree = "<group>"; };
+		5DD438BA1FB01E14006C462B /* icons8-usa-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-usa-map.png"; sourceTree = "<group>"; };
+		5DD438BC1FB01F49006C462B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MidtermProject/Info.plist; sourceTree = SOURCE_ROOT; };
+		5DD438F51FB03E60006C462B /* EmploymentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploymentFormViewController.swift; sourceTree = "<group>"; };
+		E23017BEA105A3065B14B783 /* Pods_MidtermProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidtermProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +81,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD5DDDF5A43386DF94E11A5 /* Pods_MidtermProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250015B0F3A8FEEB346D4C98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28392894863DE420AACCB3C9 /* Pods-MidtermProject.debug.xcconfig */,
+				52CF0B08D80425A12B5C7055 /* Pods-MidtermProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A2D332A1FACE73B00E9D2B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DD438F51FB03E60006C462B /* EmploymentFormViewController.swift */,
+				5DD438B81FB01DEF006C462B /* TerminalsViewController.swift */,
+				5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */,
+				5D09A8951FAC07B8002B47D2 /* HomeViewController.swift */,
+				5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */,
+				5D09A8A71FAC2D1D002B47D2 /* ContactTableViewController.swift */,
+				5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */,
+				5AF9127F1FCF3BD000CEBFF8 /* RegistrationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A2D332B1FACE74200E9D2B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A2D332C1FACE74900E9D2B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A8831FABFC1C002B47D2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A2D332D1FACE74F00E9D2B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */,
+				5DD438BC1FB01F49006C462B /* Info.plist */,
+				5D09A8881FABFC1C002B47D2 /* LaunchScreen.storyboard */,
+				5D09A8861FABFC1C002B47D2 /* Assets.xcassets */,
+				5D09A8AD1FACBC7D002B47D2 /* CompanyContacts.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A2D332E1FACE77300E9D2B6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A8A11FAC1606002B47D2 /* addressBook.png */,
+				5DD438B61FB01CD6006C462B /* map-pin.png */,
+				5D09A8A31FAC1615002B47D2 /* addList.png */,
+				5DD438BA1FB01E14006C462B /* icons8-usa-map.png */,
+				5DD438B41FB0167A006C462B /* Junior.jpg */,
+				5D09A89F1FAC15A8002B47D2 /* icons8-home-3.png */,
+				5D09A8971FAC0A29002B47D2 /* finkle trucking.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		5D09A8731FABFC1C002B47D2 = {
 			isa = PBXGroup;
 			children = (
 				5D09A87E1FABFC1C002B47D2 /* MidtermProject */,
 				5D09A87D1FABFC1C002B47D2 /* Products */,
+				5DD438C71FB0355D006C462B /* Frameworks */,
+				250015B0F3A8FEEB346D4C98 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +175,22 @@
 		5D09A87E1FABFC1C002B47D2 /* MidtermProject */ = {
 			isa = PBXGroup;
 			children = (
+				5A2D332E1FACE77300E9D2B6 /* Images */,
+				5A2D332D1FACE74F00E9D2B6 /* Supporting Files */,
+				5A2D332C1FACE74900E9D2B6 /* Views */,
+				5A2D332B1FACE74200E9D2B6 /* Models */,
+				5A2D332A1FACE73B00E9D2B6 /* Controllers */,
 				5D09A87F1FABFC1C002B47D2 /* AppDelegate.swift */,
-				5D09A8811FABFC1C002B47D2 /* ViewController.swift */,
-				5D09A8831FABFC1C002B47D2 /* Main.storyboard */,
-				5D09A8861FABFC1C002B47D2 /* Assets.xcassets */,
-				5D09A8881FABFC1C002B47D2 /* LaunchScreen.storyboard */,
-				5D09A88B1FABFC1C002B47D2 /* Info.plist */,
 			);
 			path = MidtermProject;
+			sourceTree = "<group>";
+		};
+		5DD438C71FB0355D006C462B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E23017BEA105A3065B14B783 /* Pods_MidtermProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +200,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D09A88E1FABFC1C002B47D2 /* Build configuration list for PBXNativeTarget "MidtermProject" */;
 			buildPhases = (
+				27B11CC4441991D49D80A3F9 /* [CP] Check Pods Manifest.lock */,
 				5D09A8781FABFC1C002B47D2 /* Sources */,
 				5D09A8791FABFC1C002B47D2 /* Frameworks */,
 				5D09A87A1FABFC1C002B47D2 /* Resources */,
+				5DEB41421FAD80AD00FD37C6 /* Embed Frameworks */,
+				C037D4107121C88B363B0698 /* [CP] Embed Pods Frameworks */,
+				C7F558C245F718F3D0FB8CCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,21 +256,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF9127C1FCF347900CEBFF8 /* GoogleService-Info.plist in Resources */,
 				5D09A88A1FABFC1C002B47D2 /* LaunchScreen.storyboard in Resources */,
+				5DD438BB1FB01E15006C462B /* icons8-usa-map.png in Resources */,
 				5D09A8871FABFC1C002B47D2 /* Assets.xcassets in Resources */,
+				5D09A8AE1FACBC7D002B47D2 /* CompanyContacts.json in Resources */,
+				5DD438B51FB0167A006C462B /* Junior.jpg in Resources */,
+				5D09A8A01FAC15A8002B47D2 /* icons8-home-3.png in Resources */,
+				5D09A8981FAC0A29002B47D2 /* finkle trucking.jpg in Resources */,
+				5DD438B71FB01CD6006C462B /* map-pin.png in Resources */,
+				5DD438BD1FB01F49006C462B /* Info.plist in Resources */,
 				5D09A8851FABFC1C002B47D2 /* Main.storyboard in Resources */,
+				5D09A8A41FAC1615002B47D2 /* addList.png in Resources */,
+				5D09A8A21FAC1607002B47D2 /* addressBook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27B11CC4441991D49D80A3F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MidtermProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C037D4107121C88B363B0698 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7F558C245F718F3D0FB8CCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D09A8781FABFC1C002B47D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D09A8821FABFC1C002B47D2 /* ViewController.swift in Sources */,
+				5D09A8AC1FACBC5E002B47D2 /* ContactsModel.swift in Sources */,
+				5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */,
+				5DD438F61FB03E60006C462B /* EmploymentFormViewController.swift in Sources */,
+				5AF9127E1FCF39C200CEBFF8 /* LoginPageViewController.swift in Sources */,
+				5AF912801FCF3BD000CEBFF8 /* RegistrationViewController.swift in Sources */,
 				5D09A8801FABFC1C002B47D2 /* AppDelegate.swift in Sources */,
+				5D09A8A81FAC2D1D002B47D2 /* ContactTableViewController.swift in Sources */,
+				5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */,
+				5D09A8961FAC07B8002B47D2 /* HomeViewController.swift in Sources */,
+				5DD438B91FB01DEF006C462B /* TerminalsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +481,13 @@
 		};
 		5D09A88F1FABFC1C002B47D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28392894863DE420AACCB3C9 /* Pods-MidtermProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MidtermProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs498.MidtermProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,10 +498,13 @@
 		};
 		5D09A8901FABFC1C002B47D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CF0B08D80425A12B5C7055 /* Pods-MidtermProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MidtermProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs498.MidtermProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
