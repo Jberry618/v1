@@ -36,11 +36,13 @@
                             </segments>
                             <connections>
                                 <action selector="segmentChange:" destination="AZP-62-IZq" eventType="valueChanged" id="vQy-Y8-jBJ"/>
+                                <action selector="valueSwitched:" destination="16G-eb-Kuv" eventType="valueChanged" id="hET-Xc-kNN"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="segmentControl" destination="dxf-lf-fVv" id="d4u-Gw-NAO"/>
+                        <outlet property="switchView" destination="xm9-6c-33i" id="rEx-Xo-OMR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-2f-xkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,7 +53,7 @@
         <!--View Controller-->
         <scene sceneID="kq7-0a-PeZ">
             <objects>
-                <viewController id="2u0-jf-bPo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomepageVC" id="2u0-jf-bPo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kPx-tR-ikk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +123,7 @@
         <!--View Controller-->
         <scene sceneID="6wX-Yp-8PI">
             <objects>
-                <viewController id="iZm-y1-wgk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutVC" id="iZm-y1-wgk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Re3-hC-cq3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
