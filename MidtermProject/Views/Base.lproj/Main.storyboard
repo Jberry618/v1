@@ -34,20 +34,6 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="0.1151359478" green="0.17673349620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Dedicated to Innovative Transportation Solutions&quot;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcR-oN-9Tz">
-                                <rect key="frame" x="31" y="100" width="327" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United States Postal Service contractor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-0W-HR5">
-                                <rect key="frame" x="39" y="124" width="310" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.11513594781184866" green="0.17673349624315293" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-8x-pGd">
                                 <rect key="frame" x="17" y="310" width="342" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,8 +63,62 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Dedicated to Innovative Transportation Solutions&quot;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcR-oN-9Tz">
+                                <rect key="frame" x="25" y="100" width="327" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Xco-4R-Rp9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kb2-Nh-igl">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dxf-lf-fVv">
+                            <rect key="frame" x="116" y="7" width="143" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="About"/>
+                                <segment title="Home"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentChange:" destination="16G-eb-Kuv" eventType="valueChanged" id="Rvz-hg-MAT"/>
+                                <action selector="segmentChange:" destination="AZP-62-IZq" eventType="valueChanged" id="vQy-Y8-jBJ"/>
+                                <segue destination="Dj8-6Q-ktM" kind="presentation" id="xP1-1h-sEF"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutView" destination="gGz-ST-74p" id="7Au-ub-Ksb"/>
+                        <outlet property="copyrightLabel" destination="1v3-GI-jpv" id="Mh7-Ok-SoA"/>
+                        <outlet property="picCBF" destination="GnA-EZ-PbZ" id="aQR-C7-P9u"/>
+                        <outlet property="picTruck" destination="G55-oe-5Bb" id="vdk-zm-jo7"/>
+                        <outlet property="segmentControl" destination="dxf-lf-fVv" id="d4u-Gw-NAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-2f-xkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AZP-62-IZq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="-206"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6wX-Yp-8PI">
+            <objects>
+                <viewController id="iZm-y1-wgk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Re3-hC-cq3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United States Postal Service contractor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-0W-HR5">
+                                <rect key="frame" x="38" y="95" width="310" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.11513594781184866" green="0.17673349624315293" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGz-ST-74p">
-                                <rect key="frame" x="1" y="107" width="375" height="511"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Our Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-M9-aIt">
@@ -123,34 +163,13 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="Xco-4R-Rp9"/>
+                        <viewLayoutGuide key="safeArea" id="jU4-IG-di9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kb2-Nh-igl">
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dxf-lf-fVv">
-                            <rect key="frame" x="116" y="7" width="143" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="About"/>
-                                <segment title="Home"/>
-                            </segments>
-                            <connections>
-                                <action selector="segmentChange:" destination="16G-eb-Kuv" eventType="valueChanged" id="Rvz-hg-MAT"/>
-                                <action selector="segmentChange:" destination="AZP-62-IZq" eventType="valueChanged" id="vQy-Y8-jBJ"/>
-                            </connections>
-                        </segmentedControl>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="aboutView" destination="gGz-ST-74p" id="7Au-ub-Ksb"/>
-                        <outlet property="copyrightLabel" destination="1v3-GI-jpv" id="Mh7-Ok-SoA"/>
-                        <outlet property="picCBF" destination="GnA-EZ-PbZ" id="aQR-C7-P9u"/>
-                        <outlet property="picTruck" destination="G55-oe-5Bb" id="vdk-zm-jo7"/>
-                        <outlet property="segmentControl" destination="dxf-lf-fVv" id="d4u-Gw-NAO"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="ISt-ek-25H"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-2f-xkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="AZP-62-IZq" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oU-DS-6Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3439.1999999999998" y="-206.44677661169416"/>
+            <point key="canvasLocation" x="4580" y="-206.44677661169416"/>
         </scene>
         <!--Contact Table View Controller-->
         <scene sceneID="3WW-iM-rPE">
@@ -398,7 +417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayu-fA-0Qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="-206"/>
+            <point key="canvasLocation" x="2166" y="-206"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="5sr-r4-2rU">
@@ -553,6 +572,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSv-qT-A5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2049" y="988"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wt9-fE-4sc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dj8-6Q-ktM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RZB-p8-7sf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iZm-y1-wgk" kind="relationship" relationship="rootViewController" id="N9l-iT-Jgo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M56-zm-QVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3716" y="-206"/>
         </scene>
     </scenes>
     <resources>
