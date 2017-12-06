@@ -9,6 +9,7 @@ use_frameworks!
 
 pod 'Eureka'
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
   # Pods for MidtermProject
 
 end
