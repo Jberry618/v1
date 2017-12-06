@@ -198,7 +198,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLm-NK-vPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3353" y="518"/>
+            <point key="canvasLocation" x="3958" y="518"/>
         </scene>
         <!--Employment Form View Controller-->
         <scene sceneID="2A2-o5-EEH">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvD-ck-dba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3072.8000000000002" y="1277.8110944527737"/>
+            <point key="canvasLocation" x="3412" y="1277.8110944527737"/>
         </scene>
         <!--Contact Info Table View Controller-->
         <scene sceneID="6Ca-pc-Fde">
@@ -271,7 +271,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSd-8H-ncA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4071.1999999999998" y="517.6911544227886"/>
+            <point key="canvasLocation" x="4820" y="518"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="XrY-zt-fMS">
@@ -313,7 +313,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Driver Sign-in"/>
                                 <connections>
-                                    <segue destination="O9C-vR-KY3" kind="presentation" id="CT4-yH-TWH"/>
+                                    <segue destination="RFi-06-Hix" kind="presentation" id="9BS-en-UMu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ4-pW-zvM">
@@ -417,7 +417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-te-hpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="518"/>
+            <point key="canvasLocation" x="3036" y="517.6911544227886"/>
         </scene>
         <!--Terminals View Controller-->
         <scene sceneID="8ID-DJ-bbw">
@@ -444,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBb-gk-gc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="1100"/>
+            <point key="canvasLocation" x="980" y="1099.7001499250375"/>
         </scene>
         <!--Employment-->
         <scene sceneID="v6F-r7-mAz">
@@ -463,22 +463,40 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T4-2T-BiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="1278"/>
+            <point key="canvasLocation" x="2648.8000000000002" y="1277.8110944527737"/>
         </scene>
-        <!--View Controller-->
+        <!--Driver Sign-In-->
         <scene sceneID="MBf-5m-6aW">
             <objects>
-                <viewController id="O9C-vR-KY3" sceneMemberID="viewController">
+                <viewController id="O9C-vR-KY3" customClass="DriverSignInViewController" customModule="MidtermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j6Q-1B-ek7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kbF-YV-hld">
+                                <rect key="frame" x="42" y="87" width="291" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkO-7Y-dDs">
+                                <rect key="frame" x="152" y="316" width="70" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign-In"/>
+                                <connections>
+                                    <action selector="signIn:" destination="O9C-vR-KY3" eventType="touchUpInside" id="kGw-Ag-PVi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Drt-eS-ewF"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk"/>
+                    <connections>
+                        <outlet property="signIn" destination="OkO-7Y-dDs" id="zez-cn-32a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htL-80-u7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1609" y="1007"/>
+            <point key="canvasLocation" x="-1196" y="988.15592203898063"/>
         </scene>
         <!--Terminals-->
         <scene sceneID="ke1-kP-5lT">
@@ -497,7 +515,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3D-z5-Ugb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="1100"/>
+            <point key="canvasLocation" x="303.19999999999999" y="1099.7001499250375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aaV-FD-p6h">
@@ -517,6 +535,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXc-fp-ldA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-473" y="-501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vR2-4D-4fI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RFi-06-Hix" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TUD-ZG-cKF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O9C-vR-KY3" kind="relationship" relationship="rootViewController" id="xQV-1k-edG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSv-qT-A5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2049" y="988"/>
         </scene>
     </scenes>
     <resources>

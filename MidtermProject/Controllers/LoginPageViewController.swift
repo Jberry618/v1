@@ -9,6 +9,9 @@
 import UIKit
 import Eureka
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import LocalAuthentication
 
 class LoginPageViewController: UIViewController {
 
