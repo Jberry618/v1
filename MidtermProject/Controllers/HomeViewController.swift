@@ -11,34 +11,14 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var aboutView: UIView!
-    @IBOutlet weak var aboutLabel: UILabel!
-    @IBOutlet weak var copyrightLabel: UILabel!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var picCBF: UIImageView!
-    
-    @IBOutlet weak var newText: UITextView!
-    @IBOutlet weak var homeText: UITextView!
-    
-    @IBOutlet weak var picTruck: UIImageView!
-    @IBAction func segmentChange(_ sender: UISegmentedControl) {
-        switch segmentControl.selectedSegmentIndex {
-        case 0:
-            aboutView.isHidden = false
-            picTruck.isHidden = true
-            picCBF.isHidden = false
-//            aboutLabel.isHidden = false
-            copyrightLabel.isHidden = false
-        case 1:
-            aboutView.isHidden = true
-            picTruck.isHidden = false
-            picCBF.isHidden = true
-//            aboutLabel.isHidden = false
-            copyrightLabel.isHidden = false
-        default:
-            aboutView.isHidden = false
-        }
+    enum TabIndex : Int {
+        case firstChildTab = 0
+        case secondChildTab = 1
     }
+    
+    @IBOutlet weak var aboutView: UIView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     
     
     override func viewDidLoad() {

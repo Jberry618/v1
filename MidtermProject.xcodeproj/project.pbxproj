@@ -11,6 +11,7 @@
 		5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */; };
 		5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */; };
 		5A3E94E01FD86F92001F903F /* DriverSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */; };
+		5A3E94E21FD87944001F903F /* HomeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */; };
 		5AF9127C1FCF347900CEBFF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */; };
 		5AF9127E1FCF39C200CEBFF8 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */; };
 		5AF912801FCF3BD000CEBFF8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9127F1FCF3BD000CEBFF8 /* RegistrationViewController.swift */; };
@@ -53,6 +54,7 @@
 		5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewController.swift; sourceTree = "<group>"; };
 		5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
 		5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSignInViewController.swift; sourceTree = "<group>"; };
+		5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentControl.swift; sourceTree = "<group>"; };
 		5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		5AF9127F1FCF3BD000CEBFF8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		5A2D332D1FACE74F00E9D2B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */,
 				5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */,
 				5DD438BC1FB01F49006C462B /* Info.plist */,
 				5D09A8881FABFC1C002B47D2 /* LaunchScreen.storyboard */,
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3E94E21FD87944001F903F /* HomeSegmentControl.swift in Sources */,
 				5D09A8AC1FACBC5E002B47D2 /* ContactsModel.swift in Sources */,
 				5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */,
 				5DD438F61FB03E60006C462B /* EmploymentFormViewController.swift in Sources */,

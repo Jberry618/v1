@@ -31,19 +31,19 @@ class LoginPageViewController: UIViewController {
         let u = email.text
         let p = password.text
         
-        FirebaseApp.auth()!.signIn(withEmail: u!, password: p!, completion: { (user, error) in
-            if error == nil {
-                print ("login successful")
-                self.message.text = "success"
-                UserDefaults.standard.set(u!, forKey: self.emailKey)
-                self.performSegue(withIdentifier: "loginSegue", sender: self)
-            }
-            else {
-                print ("login failed")
-                print ((error?.localizedDescription)!)
-                self.message.text = (error?.localizedDescription)!
-            }
-        })
+//        FirebaseApp.auth()!.signIn(withEmail: u!, password: p!, completion: { (user, error) in
+//            if error == nil {
+//                print ("login successful")
+//                self.message.text = "success"
+//                UserDefaults.standard.set(u!, forKey: self.emailKey)
+//                self.performSegue(withIdentifier: "loginSegue", sender: self)
+//            }
+//            else {
+//                print ("login failed")
+//                print ((error?.localizedDescription)!)
+//                self.message.text = (error?.localizedDescription)!
+//            }
+//        })
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
