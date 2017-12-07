@@ -13,6 +13,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'FirebaseStorage'
+pod 'INTULocationManager'
   # Pods for cbfWebsitePort
 
 end

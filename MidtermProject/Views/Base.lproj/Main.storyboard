@@ -28,7 +28,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kb2-Nh-igl">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dxf-lf-fVv" customClass="HomeSegmentControl" customModule="MidtermProject" customModuleProvider="target">
-                            <rect key="frame" x="8" y="7" width="359" height="30"/>
+                            <rect key="frame" x="94" y="7" width="187" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Home"/>
@@ -389,7 +389,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="smz-QL-bQm"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zRZ-uE-6oM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zRZ-uE-6oM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="B4U-50-mYD"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="yyT-DK-NnB"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWe-jj-cFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -510,24 +515,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kbF-YV-hld">
-                                <rect key="frame" x="42" y="87" width="291" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkO-7Y-dDs">
-                                <rect key="frame" x="152" y="316" width="70" height="34"/>
+                                <rect key="frame" x="152" y="402" width="70" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign-In"/>
                                 <connections>
                                     <action selector="signIn:" destination="O9C-vR-KY3" eventType="touchUpInside" id="kGw-Ag-PVi"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kbF-YV-hld">
+                                <rect key="frame" x="16" y="64" width="343" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Drt-eS-ewF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk"/>
+                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="kyU-Ts-Be9"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="kbF-YV-hld" id="3Xc-X4-jj1"/>
                         <outlet property="signIn" destination="OkO-7Y-dDs" id="zez-cn-32a"/>
                     </connections>
                 </viewController>
@@ -571,7 +579,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXc-fp-ldA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-473" y="-501"/>
+            <point key="canvasLocation" x="-663" y="-501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vR2-4D-4fI">

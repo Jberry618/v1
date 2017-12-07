@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-        HomeSegmentControl.initUI()
+//        HomeSegmentControl.initUI()
         segmentControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
         displayCurrentTab(TabIndex.firstChildTab.rawValue)
     }
