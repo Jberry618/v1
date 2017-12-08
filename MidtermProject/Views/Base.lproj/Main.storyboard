@@ -270,6 +270,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <pickerView key="tableFooterView" contentMode="scaleToFill" id="8IU-uo-4ek">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </pickerView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactInfoCell" id="reY-No-jFc" customClass="ContactDataTableViewCell" customModule="MidtermProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -358,17 +362,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="90A-oh-evo" kind="popoverPresentation" popoverAnchorView="HZ4-pW-zvM" id="aEk-s4-Xdb">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="signUp:" destination="dXp-fj-aBD" eventType="touchUpInside" id="7jH-0o-04T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDv-iZ-9xt">
+                                <rect key="frame" x="16" y="305" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="w9S-MM-5J6"/>
                     </view>
                     <navigationItem key="navigationItem" id="hXO-He-wUY"/>
                     <connections>
+                        <outlet property="confirmation" destination="VDv-iZ-9xt" id="PRM-Mj-sUt"/>
                         <outlet property="email" destination="rB1-bX-hFM" id="DxA-fR-u3c"/>
                         <outlet property="loginButton" destination="ylU-CX-dF9" id="TVJ-St-few"/>
                         <outlet property="password" destination="7pj-TA-ysC" id="8hG-CY-WoE"/>
@@ -377,33 +387,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRL-Tj-8Yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2423" y="197"/>
-        </scene>
-        <!--Registration View Controller-->
-        <scene sceneID="fN6-xe-7uw">
-            <objects>
-                <viewController id="4vG-GJ-VFc" customClass="RegistrationViewController" customModule="MidtermProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4OV-D3-H4C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="smz-QL-bQm"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="zRZ-uE-6oM">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="B4U-50-mYD"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="yyT-DK-NnB"/>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KWe-jj-cFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="252" y="-500.59970014992507"/>
+            <point key="canvasLocation" x="-2423.1999999999998" y="196.55172413793105"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="A8A-4r-Oiz">
             <objects>
-                <tabBarController id="p1K-5Z-k2j" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Homepage" id="p1K-5Z-k2j" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9RO-Gd-OWk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ke-gK-5Xq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -531,9 +520,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Drt-eS-ewF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="kyU-Ts-Be9"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk"/>
                     <connections>
                         <outlet property="mapView" destination="kbF-YV-hld" id="3Xc-X4-jj1"/>
                         <outlet property="signIn" destination="OkO-7Y-dDs" id="zez-cn-32a"/>
@@ -561,25 +548,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3D-z5-Ugb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303.19999999999999" y="1099.7001499250375"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aaV-FD-p6h">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="90A-oh-evo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2MG-8z-h2Z">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4vG-GJ-VFc" kind="relationship" relationship="rootViewController" id="JQ9-Et-tdY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xXc-fp-ldA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-663" y="-501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vR2-4D-4fI">

@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 import Firebase
 
-class EmploymentFormViewController: FormViewController {
+class EmploymentFormViewController: FormViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var submit: UIBarButtonItem!
     
@@ -20,6 +20,7 @@ class EmploymentFormViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let terminals = ["FL", "IN", "NH", "NJ", "NY", "PA"]
         self.title = "Employment"
         form +++ Section("Personal Information")
             <<< TextRow(){ row in
@@ -50,10 +51,6 @@ class EmploymentFormViewController: FormViewController {
                 $0.title = "Cell Phone"
                 $0.placeholder = "201-555-5555"
             }
-            <<< TextRow(){
-                $0.title = "Cell Phone"
-                $0.placeholder = "201-555-5555"
-            }
             <<< EmailRow(){
                 $0.title = "Email"
                 $0.placeholder = "finkle@finkle.com"
@@ -63,10 +60,7 @@ class EmploymentFormViewController: FormViewController {
                 $0.placeholder = "6:45"
         }
         form +++ Section("Driver information")
-            
         
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

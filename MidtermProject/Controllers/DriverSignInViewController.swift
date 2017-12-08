@@ -10,40 +10,24 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class DriverSignInViewController: UIViewController {
+class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func signIn(_ sender: UIButton) {
         OkAlert(withTitle: "Successful", andMessage: "Thank you, freight status and location has been updated.")
-        
-    }
-    var locationManager: CLLocationManager!
-    
-    func setupLocationTracking () {
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self as? CLLocationManagerDelegate
-        locationManager.startUpdatingLocation()
-        
-    }
-    
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        print ("Location Updated")
-        let location = locations.last as! CLLocation
-        print (location)
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-        region.center = mapView.userLocation.coordinate
-        mapView.setRegion(region, animated: true)
     }
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLocationTracking()
+        //Zoom to user location
+        let noLocation = CLLocationCoordinate2D()
+        let viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 200, 200)
+        mapView.setRegion(viewRegion, animated: false)
 
         // Do any additional setup after loading the view.
     }
@@ -52,17 +36,27 @@ class DriverSignInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // Location Managing starts here
+    let locationManager = CLLocationManager()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupLocationTracking () {
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        
     }
-    */
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        print ("location udaated")
+        let location = locations.last as! CLLocation
+        print (location)
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        region.center = mapView.userLocation.coordinate
+        mapView.setRegion(region, animated: true)
+    }
     
     func OkAlert (withTitle title: String, andMessage message: String ) {
         let alert = UIAlertController(title: title , message: message, preferredStyle: .actionSheet)

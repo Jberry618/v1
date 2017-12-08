@@ -17,6 +17,8 @@ class LoginPageViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var register: UIButton!
+    @IBOutlet weak var confirmation: UILabel!
+    
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -26,26 +28,74 @@ class LoginPageViewController: UIViewController {
         self.title = "Authorization Page"
         // Do any additional setup after loading the view.
     }
+    @IBAction func signUp(_ sender: AnyObject) {
+        if email.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+                if error == nil {
+                    self.confirmation.text = "You have successfully signed up."
 
-    @IBAction func login(_ sender: UIButton) {
-        let u = email.text
-        let p = password.text
-        
-//        FirebaseApp.auth()!.signIn(withEmail: u!, password: p!, completion: { (user, error) in
-//            if error == nil {
-//                print ("login successful")
-//                self.message.text = "success"
-//                UserDefaults.standard.set(u!, forKey: self.emailKey)
-//                self.performSegue(withIdentifier: "loginSegue", sender: self)
-//            }
-//            else {
-//                print ("login failed")
-//                print ((error?.localizedDescription)!)
-//                self.message.text = (error?.localizedDescription)!
-//            }
-//        })
+                    
+//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
+//                    self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
     }
-    override func didReceiveMemoryWarning() {
+    
+    @IBAction func login(_ sender: UIButton) {
+        if self.email.text == "" || self.password.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
+                if error == nil {
+                    
+                    //Print into the console if successfully logged in
+                    print("You have successfully logged in")
+                    
+                    //Go to the HomeViewController if the login is sucessful
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
+                    self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    //Tells the user that there is an error and then gets firebase to tell them the error
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
