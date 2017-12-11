@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXp-fj-aBD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXp-fj-aBD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -202,7 +202,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KNz-O2-c8A" id="vaD-yn-yJF">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yve-me-JND">
@@ -235,7 +235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLm-NK-vPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3958" y="518"/>
+            <point key="canvasLocation" x="4636" y="517.6911544227886"/>
         </scene>
         <!--Employment Form View Controller-->
         <scene sceneID="2A2-o5-EEH">
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvD-ck-dba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412" y="1277.8110944527737"/>
+            <point key="canvasLocation" x="4090.4000000000001" y="1277.8110944527737"/>
         </scene>
         <!--Contact Info Table View Controller-->
         <scene sceneID="6Ca-pc-Fde">
@@ -270,10 +270,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <pickerView key="tableFooterView" contentMode="scaleToFill" id="8IU-uo-4ek">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        </pickerView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactInfoCell" id="reY-No-jFc" customClass="ContactDataTableViewCell" customModule="MidtermProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -312,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSd-8H-ncA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4820" y="518"/>
+            <point key="canvasLocation" x="5498.3999999999996" y="517.6911544227886"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="XrY-zt-fMS">
@@ -354,7 +350,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Driver Sign-in"/>
                                 <connections>
-                                    <segue destination="O9C-vR-KY3" kind="show" id="UPK-mU-ahx"/>
+                                    <segue destination="PYZ-QJ-CXO" kind="presentation" id="wuN-0q-rNL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ4-pW-zvM">
@@ -448,7 +444,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ig-te-hpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3036" y="517.6911544227886"/>
+            <point key="canvasLocation" x="3714.4000000000001" y="517.6911544227886"/>
         </scene>
         <!--Terminals View Controller-->
         <scene sceneID="8ID-DJ-bbw">
@@ -475,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBb-gk-gc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="1099.7001499250375"/>
+            <point key="canvasLocation" x="1658.4000000000001" y="1099.7001499250375"/>
         </scene>
         <!--Employment-->
         <scene sceneID="v6F-r7-mAz">
@@ -494,7 +490,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T4-2T-BiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2648.8000000000002" y="1277.8110944527737"/>
+            <point key="canvasLocation" x="3327.1999999999998" y="1277.8110944527737"/>
         </scene>
         <!--Driver Sign-In-->
         <scene sceneID="MBf-5m-6aW">
@@ -505,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkO-7Y-dDs">
-                                <rect key="frame" x="152" y="402" width="70" height="34"/>
+                                <rect key="frame" x="152" y="366" width="70" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign-In"/>
                                 <connections>
@@ -513,31 +509,29 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kbF-YV-hld">
-                                <rect key="frame" x="16" y="64" width="343" height="247"/>
+                                <rect key="frame" x="16" y="91" width="343" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="back-chevron.png" translatesAutoresizingMaskIntoConstraints="NO" id="VS8-L0-qc1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="zVy-sP-nGj">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="TK4-n7-1le"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Drt-eS-ewF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk"/>
+                    <navigationItem key="navigationItem" title="Driver Sign-In" id="bFr-La-xuk">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="r0Y-2B-91k">
+                            <connections>
+                                <action selector="backPressed:" destination="O9C-vR-KY3" id="2Gq-Vy-Fmy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="r0Y-2B-91k" id="UaJ-9K-ag6"/>
                         <outlet property="mapView" destination="kbF-YV-hld" id="3Xc-X4-jj1"/>
                         <outlet property="signIn" destination="OkO-7Y-dDs" id="zez-cn-32a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htL-80-u7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="988.15592203898063"/>
+            <point key="canvasLocation" x="-1279" y="994"/>
         </scene>
         <!--Terminals-->
         <scene sceneID="ke1-kP-5lT">
@@ -556,14 +550,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3D-z5-Ugb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303.19999999999999" y="1099.7001499250375"/>
+            <point key="canvasLocation" x="981.60000000000002" y="1099.7001499250375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tam-Yd-lGw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYZ-QJ-CXO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u1i-3v-yrS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O9C-vR-KY3" kind="relationship" relationship="rootViewController" id="qsT-Sz-NQy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0C-GE-Rse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2423" y="994"/>
         </scene>
     </scenes>
     <resources>
         <image name="Junior.jpg" width="375" height="338"/>
         <image name="addList.png" width="30" height="30"/>
         <image name="addressBook.png" width="30" height="30"/>
-        <image name="back-chevron.png" width="13" height="21"/>
         <image name="finkle trucking.jpg" width="650" height="351"/>
         <image name="icons8-home-3.png" width="30" height="30"/>
         <image name="icons8-usa-map.png" width="30" height="30"/>

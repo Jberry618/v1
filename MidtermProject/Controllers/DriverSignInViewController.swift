@@ -19,7 +19,11 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         OkAlert(withTitle: "Successful", andMessage: "Thank you, freight status and location has been updated.")
     }
 
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
+    @IBAction func backPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
