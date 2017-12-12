@@ -13,7 +13,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'FirebaseStorage'
-pod 'GeoFire'
+#pod 'GeoFire'
 pod 'INTULocationManager'
   # Pods for cbfWebsitePort
 

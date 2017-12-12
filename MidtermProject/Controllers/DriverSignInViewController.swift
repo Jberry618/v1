@@ -25,7 +25,7 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     @IBOutlet weak var backButton: UIBarButtonItem!
     
     @IBAction func backPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -78,14 +78,18 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
         {
-            print("Longitude: ", locationManager.location?.coordinate.longitude as Any)
-            print("Latitude:", locationManager.location?.coordinate.latitude as Any)
+            let latitude = locationManager.location?.coordinate.latitude
+            let longitude = locationManager.location?.coordinate.longitude
+            print("Longitude: ", longitude!)
+            print("Latitude:", latitude!)
             labelLatitude.text = ""
             labelLongitude.text = ""
         } else {
             labelLatitude.text = "Location not authorized"
             labelLongitude.text = "Location not authorized"
         }
+        
+        ref?.child("Location").childByAutoId().setValue(locationManager.location?.coordinate.latitude)
     }
     
     
