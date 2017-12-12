@@ -3,7 +3,6 @@
 //
 //  Created by Joshua T. Berry on 11/3/17.
 //  Copyright © 2017 Monmouth University. All rights reserved.
-
 import UIKit
 import Firebase
 
