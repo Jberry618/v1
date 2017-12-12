@@ -17,6 +17,8 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     @IBOutlet weak var labelLatitude: UILabel!
     @IBOutlet weak var labelLongitude: UILabel!
     
+    let locationManager = CLLocationManager()
+    
     @IBAction func signIn(_ sender: UIButton) {
 //        OkAlert(withTitle: "Successful", andMessage: "Thank you, freight status and location has been updated.")
     }
@@ -29,26 +31,65 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            let locationManager = CLLocationManager()
-        let latitude = locationManager.location?.coordinate.latitude
-        let longitude = locationManager.location?.coordinate.longitude
-        if (CLLocationManager.locationServicesEnabled()) {
+        
+        
+        // We will not be using always authorization because this is a one-time sign in and should only happen when the app is open.
+        locationManager.requestAlwaysAuthorization()
+        
+        // Only when app is open
+//        locationManager.requestWhenInUseAuthorization()
+        
+        // Check if location services are enabled
+        if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startMonitoringSignificantLocationChanges()
-            
-            labelLatitude.text = "latitude"
-            labelLongitude.text = "latitude"
-            
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
         }
-        // Do any additional setup after loading the view.
+        mapView.showsUserLocation = true
     }
+        // Do any additional setup after loading the view.
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // Location Managing starts here
+    
+    // Print out the location to the console
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last! as CLLocation
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.mapView.setRegion(region, animated: true)
+    }
+    
+    // If we have been deined access give the user the option to change it
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == CLAuthorizationStatus.denied) {
+            showLocationDisabledPopUp()
+        }
+    }
+    
+    // Show the popup to the user if we have been deined access
+    func showLocationDisabledPopUp() {
+        let alertController = UIAlertController(title: "Background Location Access Disabled",
+                                                message: "We need your location for your status to be updated.",
+                                                preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        alertController.addAction(openAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     
     
@@ -77,12 +118,12 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
 //    }
 //}
 
-//    func OkAlert (withTitle title: String, andMessage message: String ) {
-//        let alert = UIAlertController(title: title , message: message, preferredStyle: .actionSheet)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default) { action in
-//            self.navigationController?.popViewController(animated: true)
-//        })
-//        self.present (alert, animated: true)
-//    }
+    func OkAlert (withTitle title: String, andMessage message: String ) {
+        let alert = UIAlertController(title: title , message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { action in
+            self.navigationController?.popViewController(animated: true)
+        })
+        self.present (alert, animated: true)
+    }
 
 }
