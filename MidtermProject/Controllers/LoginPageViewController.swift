@@ -28,6 +28,7 @@ class LoginPageViewController: UIViewController {
         self.title = "Authorization Page"
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func signUp(_ sender: AnyObject) {
         if email.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)

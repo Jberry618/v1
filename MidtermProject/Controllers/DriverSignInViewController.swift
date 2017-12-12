@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Firebase
+import FirebaseDatabase
 
 class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -19,9 +21,6 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     
     let locationManager = CLLocationManager()
     
-    @IBAction func signIn(_ sender: UIButton) {
-//        OkAlert(withTitle: "Successful", andMessage: "Thank you, freight status and location has been updated.")
-    }
 
     @IBOutlet weak var backButton: UIBarButtonItem!
     
@@ -31,7 +30,8 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        labelLatitude.text = ""
+        labelLongitude.text = ""
         
         // We will not be using always authorization because this is a one-time sign in and should only happen when the app is open.
         locationManager.requestAlwaysAuthorization()
@@ -65,6 +65,30 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         self.mapView.setRegion(region, animated: true)
     }
     
+    @IBAction func signIn(_ sender: AnyObject) {
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
+        {
+            print("Longitude: ", locationManager.location?.coordinate.longitude as Any)
+            print("Latitude:", locationManager.location?.coordinate.latitude as Any)
+            labelLatitude.text = ""
+            labelLongitude.text = ""
+        } else {
+            labelLatitude.text = "Location not authorized"
+            labelLongitude.text = "Location not authorized"
+        }
+    }
+    
+    
     // If we have been deined access give the user the option to change it
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if(status == CLAuthorizationStatus.denied) {
@@ -90,6 +114,7 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     
     
     
