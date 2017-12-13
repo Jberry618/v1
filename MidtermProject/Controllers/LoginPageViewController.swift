@@ -40,8 +40,8 @@ class LoginPageViewController: UIViewController {
                 self.confirmation.text = "registration successful"
             }
             else {
-                print ("register failed")
-                self.confirmation.text = "registration failed"
+                print ("Register success")
+                self.confirmation.text = "Registration success"
             }
         })
     }
