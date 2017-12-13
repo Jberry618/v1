@@ -1,37 +1,23 @@
-///*
-//  Users.swift
-// */
-//
-//import Foundation
-//import Firebase
-//
-//struct User {
-//
-//    let key: String
-//    let email: String
-//    let name: String
-//    let ref: Database.database().reference()
-//
-//    init(snapshot: ) {
-//        key = snapshot.key
-//        let snapshotValue = snapshot.value as! [String: AnyObject]
-//        name = snapshotValue["name"] as! String
-//        email = snapshotValue["email"] as! String
-//        ref = snapshot.ref
-//    }
-//
-//    init(name: String, email: String, key: String) {
-//        self.name = name
-//        self.email = email
-//        self.key = key
-//        self.ref = nil
-//    }
-//
-//    func toAnyObject() -> Any {
-//        return [
-//            "name": name,
-//            "email": email,
-//        ]
-//    }
-//}
+/*
+ Users.swift
+ */
 
+import Foundation
+import Firebase
+
+struct User {
+    
+    let uid: String
+    let email: String
+    
+    init(authData: User) {
+        uid = authData.uid
+        email = authData.email
+    }
+    
+    init(uid: String, email: String) {
+        self.uid = uid
+        self.email = email
+    }
+    
+}

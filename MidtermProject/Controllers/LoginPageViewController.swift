@@ -15,6 +15,7 @@ import LocalAuthentication
 
 class LoginPageViewController: UIViewController {
 
+    let userModel = UserModel.sharedInstance
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var confirmation: UILabel!
@@ -32,59 +33,39 @@ class LoginPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func signUp(_ sender: AnyObject) {
-        if email.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-            
-        } else {
-            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
-                if error == nil {
-                    self.confirmation.text = "You have successfully signed up."
-
-                    
-//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
-//                    self.present(vc!, animated: true, completion: nil)
-                    
-                } else {
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)
-                }
+    @IBAction func signUp(_ sender: UIButton) {
+        userModel.registerUser(email: email.text!, password: password.text!, completionHandler: { (_ success) in
+            if (success) {
+                print ("registration successful")
+                self.confirmation.text = "registration successful"
             }
-        }
+            else {
+                print ("register failed")
+                self.confirmation.text = "registration failed"
+            }
+        })
     }
     
-    @IBAction func login(_ sender: Any) {
-        if (email.text?.count == 0 ) || (password.text?.count == 0) {
-            self.confirmation.text = "Enter email and password"
-            return
-        }
-        if let u = email.text, let p = password.text {
-            Auth.auth().signIn(withEmail: u, password: p, completion: { (user, error) in
-                if error == nil {
-                    print ("Login successful")
-                    self.confirmation.text = "Success"
-                    UserDefaults.standard.set(u, forKey: self.emailKey)
-                    UserDefaults.standard.set(p, forKey: self.passwordKey)
-                    self.performSegue(withIdentifier: "loginSegue", sender: self)
-                }
-                else {
-                    print ("Login failed")
-                    print ((error?.localizedDescription)!)
-                    self.confirmation.text = (error?.localizedDescription)!
-                }
-            })
-        } else {
-            self.confirmation.text = "Enter email and/or password"
-        }
+    @IBAction func login(_ sender: UIButton) {
+     let u = email.text
+     let p = password.text
+        
+        userModel.verifyLogin(email: u!, password: p!,
+                              completionHandler: { (success) in
+                                if (success) {
+                                    self.confirmation.text = "Login successful"
+                                    self.email.text = ""
+                                    self.password.text = ""
+                                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
+                                    self.present(vc!, animated: true, completion: nil)
+                                }
+                                else {
+                                    self.confirmation.text = "Login failed"
+                                    self.email.text = ""
+                                    self.password.text = ""
+                                }
+                                
+        })
         
         
         

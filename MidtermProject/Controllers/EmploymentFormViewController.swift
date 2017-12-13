@@ -60,7 +60,14 @@ class EmploymentFormViewController: FormViewController, UIPickerViewDelegate {
                 $0.placeholder = "6:45"
         }
         form +++ Section("Driver information")
-        
+            <<< TextRow(){ row in
+                row.title = "License Number"
+                row.placeholder = "B371928SE"
+        }
+            <<< TextRow(){ row in
+                row.title = "CDL Length"
+                row.placeholder = "4 years"
+        }
     }
 
     override func didReceiveMemoryWarning() {

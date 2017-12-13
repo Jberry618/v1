@@ -11,6 +11,7 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
+    
     enum TabIndex : Int {
         case firstChildTab = 0
         case secondChildTab = 1
@@ -51,14 +52,18 @@ class HomeViewController: UIViewController {
         displayCurrentTab(sender.selectedSegmentIndex)
         
     }
-    @IBAction func logoutTouched(_ sender: AnyObject) {
+    
+    @IBAction func logoutTouched(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginPage")
+            self.present(vc!, animated: true, completion: nil)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

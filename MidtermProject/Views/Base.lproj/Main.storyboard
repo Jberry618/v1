@@ -30,9 +30,9 @@
                     <navigationItem key="navigationItem" id="kb2-Nh-igl">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Logout" id="roD-TU-eR5"/>
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="IeI-nm-8q4">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Emd-2G-MFe">
                             <connections>
-                                <action selector="logoutTouched:" destination="16G-eb-Kuv" id="WQX-jh-qEk"/>
+                                <action selector="logoutTouched:" destination="16G-eb-Kuv" id="sft-2H-6Tu"/>
                             </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dxf-lf-fVv" customClass="HomeSegmentControl" customModule="MidtermProject" customModuleProvider="target">
@@ -54,7 +54,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="logout" destination="IeI-nm-8q4" id="Tvm-Jg-uZR"/>
+                        <outlet property="logout" destination="Emd-2G-MFe" id="GOq-tB-iUQ"/>
                         <outlet property="segmentControl" destination="dxf-lf-fVv" id="d4u-Gw-NAO"/>
                         <outlet property="switchView" destination="xm9-6c-33i" id="rEx-Xo-OMR"/>
                     </connections>
@@ -218,18 +218,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KNz-O2-c8A" id="vaD-yn-yJF">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yve-me-JND">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="5" width="34" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="do5-uo-QUZ">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -291,7 +291,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="reY-No-jFc" id="q2p-32-Mow">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9q-fl-z5Y">
@@ -375,7 +375,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="login:" destination="dXp-fj-aBD" eventType="touchUpInside" id="jKW-Vd-YwW"/>
-                                    <segue destination="p1K-5Z-k2j" kind="show" identifier="loginSegue" id="F0h-4R-Jlr"/>
+                                    <segue destination="p1K-5Z-k2j" kind="presentation" id="HEc-QR-JOc"/>
                                 </connections>
                             </button>
                         </subviews>

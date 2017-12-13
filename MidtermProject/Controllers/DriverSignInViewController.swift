@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-
+    let userModel = UserModel.sharedInstance
     let authStatus = CLLocationManager.authorizationStatus()
     let inUse = CLAuthorizationStatus.authorizedWhenInUse
     let always = CLAuthorizationStatus.authorizedAlways
@@ -67,7 +67,7 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         self.mapView.setRegion(region, animated: true)
     }
     
-    @IBAction func signIn(_ sender: AnyObject) {
+    @IBAction func signIn(_ sender: UIButton) {
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
         
