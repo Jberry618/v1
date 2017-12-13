@@ -22,6 +22,9 @@ class LoginPageViewController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    let emailKey = "email" //
+    let passwordKey = "password" //
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,41 +62,32 @@ class LoginPageViewController: UIViewController {
         }
     }
     
-    @IBAction func login(_ sender: UIButton) {
-        if self.email.text == "" || self.password.text == "" {
-            
-            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
-            
-            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-            
-        } else {
-            
-            Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
-                if error == nil {
-                    //Print into the console if successfully logged in
-                    print("You have successfully logged in")
-                    
-                    //Go to the HomeViewController if the login is sucessful
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
-                    self.present(vc!, animated: true, completion: nil)
-                    
-                } else {
-                    
-                    //Tells the user that there is an error and then gets firebase to tell them the error
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)
-                }
-            }
+    @IBAction func login(_ sender: Any) {
+        if (email.text?.count == 0 ) || (password.text?.count == 0) {
+            self.confirmation.text = "Enter email and password"
+            return
         }
+        if let u = email.text, let p = password.text {
+            Auth.auth().signIn(withEmail: u, password: p, completion: { (user, error) in
+                if error == nil {
+                    print ("Login successful")
+                    self.confirmation.text = "Success"
+                    UserDefaults.standard.set(u, forKey: self.emailKey)
+                    UserDefaults.standard.set(p, forKey: self.passwordKey)
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                }
+                else {
+                    print ("Login failed")
+                    print ((error?.localizedDescription)!)
+                    self.confirmation.text = (error?.localizedDescription)!
+                }
+            })
+        } else {
+            self.confirmation.text = "Enter email and/or password"
+        }
+        
+        
+        
     }
         override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

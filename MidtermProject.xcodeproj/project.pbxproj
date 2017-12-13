@@ -11,7 +11,7 @@
 		5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */; };
 		5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */; };
 		5A3E94E01FD86F92001F903F /* DriverSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */; };
-		5A3E94E21FD87944001F903F /* HomeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */; };
+		5A5A219D1FE0BBCB00F8D881 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A219C1FE0BBCB00F8D881 /* User.swift */; };
 		5A6EA7151FE0993E009B747A /* icons8-map-marker-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7141FE0993C009B747A /* icons8-map-marker-100.png */; };
 		5A6EA7171FE09A2F009B747A /* map-marker-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7161FE09A2E009B747A /* map-marker-icon.png */; };
 		5A6EA7191FE09A87009B747A /* TruckInFrontofBuilding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7181FE09A86009B747A /* TruckInFrontofBuilding.jpg */; };
@@ -55,7 +55,7 @@
 		5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewController.swift; sourceTree = "<group>"; };
 		5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
 		5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSignInViewController.swift; sourceTree = "<group>"; };
-		5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentControl.swift; sourceTree = "<group>"; };
+		5A5A219C1FE0BBCB00F8D881 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A6EA7141FE0993C009B747A /* icons8-map-marker-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-map-marker-100.png"; sourceTree = "<group>"; };
 		5A6EA7161FE09A2E009B747A /* map-marker-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker-icon.png"; sourceTree = "<group>"; };
 		5A6EA7181FE09A86009B747A /* TruckInFrontofBuilding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TruckInFrontofBuilding.jpg; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 		5A2D332B1FACE74200E9D2B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A5A219C1FE0BBCB00F8D881 /* User.swift */,
 				5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */,
 			);
 			path = Models;
@@ -137,7 +138,6 @@
 		5A2D332D1FACE74F00E9D2B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */,
 				5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */,
 				5DD438BC1FB01F49006C462B /* Info.plist */,
 				5D09A8881FABFC1C002B47D2 /* LaunchScreen.storyboard */,
@@ -354,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3E94E21FD87944001F903F /* HomeSegmentControl.swift in Sources */,
 				5D09A8AC1FACBC5E002B47D2 /* ContactsModel.swift in Sources */,
 				5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */,
 				5DD438F61FB03E60006C462B /* EmploymentFormViewController.swift in Sources */,
@@ -362,6 +361,7 @@
 				5A3E94E01FD86F92001F903F /* DriverSignInViewController.swift in Sources */,
 				5D09A8801FABFC1C002B47D2 /* AppDelegate.swift in Sources */,
 				5D09A8A81FAC2D1D002B47D2 /* ContactTableViewController.swift in Sources */,
+				5A5A219D1FE0BBCB00F8D881 /* User.swift in Sources */,
 				5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */,
 				5D09A8961FAC07B8002B47D2 /* HomeViewController.swift in Sources */,
 				5DD438B91FB01DEF006C462B /* TerminalsViewController.swift in Sources */,

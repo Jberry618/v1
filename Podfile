@@ -7,14 +7,14 @@ target 'MidtermProject' do
 source 'https://github.com/CocoaPods/Specs.git'
 #platform :ios, '9.0'
 use_frameworks!
-
+# Pods for cbfWebsitePort
 pod 'Eureka'
+pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'FirebaseStorage'
 #pod 'GeoFire'
 pod 'INTULocationManager'
-  # Pods for cbfWebsitePort
 
 end
