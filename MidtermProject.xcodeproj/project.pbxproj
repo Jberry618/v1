@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4FD5DDDF5A43386DF94E11A5 /* Pods_MidtermProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23017BEA105A3065B14B783 /* Pods_MidtermProject.framework */; };
-		5A27B1D91FE06BFB00770AE6 /* mappies.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B1D81FE06BFA00770AE6 /* mappies.tiff */; };
-		5A27B1DB1FE06C6100770AE6 /* if_User_Interface-22_2044266.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B1DA1FE06C6100770AE6 /* if_User_Interface-22_2044266.icns */; };
-		5A27B1DD1FE06CAE00770AE6 /* if_User_Interface-22_2044266.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B1DC1FE06CAE00770AE6 /* if_User_Interface-22_2044266.icns */; };
 		5A2D33271FACDF8400E9D2B6 /* ContactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */; };
 		5A2D33291FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */; };
 		5A3E94E01FD86F92001F903F /* DriverSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */; };
 		5A3E94E21FD87944001F903F /* HomeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */; };
+		5A6EA7151FE0993E009B747A /* icons8-map-marker-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7141FE0993C009B747A /* icons8-map-marker-100.png */; };
+		5A6EA7171FE09A2F009B747A /* map-marker-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7161FE09A2E009B747A /* map-marker-icon.png */; };
+		5A6EA7191FE09A87009B747A /* TruckInFrontofBuilding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A6EA7181FE09A86009B747A /* TruckInFrontofBuilding.jpg */; };
 		5AF9127C1FCF347900CEBFF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */; };
 		5AF9127E1FCF39C200CEBFF8 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */; };
 		5D09A8801FABFC1C002B47D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A87F1FABFC1C002B47D2 /* AppDelegate.swift */; };
@@ -30,7 +30,6 @@
 		5D09A8AC1FACBC5E002B47D2 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */; };
 		5D09A8AE1FACBC7D002B47D2 /* CompanyContacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A8AD1FACBC7D002B47D2 /* CompanyContacts.json */; };
 		5DD438B51FB0167A006C462B /* Junior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438B41FB0167A006C462B /* Junior.jpg */; };
-		5DD438B71FB01CD6006C462B /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438B61FB01CD6006C462B /* map-pin.png */; };
 		5DD438B91FB01DEF006C462B /* TerminalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD438B81FB01DEF006C462B /* TerminalsViewController.swift */; };
 		5DD438BB1FB01E15006C462B /* icons8-usa-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438BA1FB01E14006C462B /* icons8-usa-map.png */; };
 		5DD438BD1FB01F49006C462B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DD438BC1FB01F49006C462B /* Info.plist */; };
@@ -53,13 +52,13 @@
 /* Begin PBXFileReference section */
 		28392894863DE420AACCB3C9 /* Pods-MidtermProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidtermProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject.debug.xcconfig"; sourceTree = "<group>"; };
 		52CF0B08D80425A12B5C7055 /* Pods-MidtermProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidtermProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MidtermProject/Pods-MidtermProject.release.xcconfig"; sourceTree = "<group>"; };
-		5A27B1D81FE06BFA00770AE6 /* mappies.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = mappies.tiff; sourceTree = "<group>"; };
-		5A27B1DA1FE06C6100770AE6 /* if_User_Interface-22_2044266.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "if_User_Interface-22_2044266.icns"; sourceTree = "<group>"; };
-		5A27B1DC1FE06CAE00770AE6 /* if_User_Interface-22_2044266.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "if_User_Interface-22_2044266.icns"; sourceTree = "<group>"; };
 		5A2D33261FACDF8400E9D2B6 /* ContactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewController.swift; sourceTree = "<group>"; };
 		5A2D33281FACE0AA00E9D2B6 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
 		5A3E94DF1FD86F92001F903F /* DriverSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSignInViewController.swift; sourceTree = "<group>"; };
 		5A3E94E11FD87944001F903F /* HomeSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentControl.swift; sourceTree = "<group>"; };
+		5A6EA7141FE0993C009B747A /* icons8-map-marker-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-map-marker-100.png"; sourceTree = "<group>"; };
+		5A6EA7161FE09A2E009B747A /* map-marker-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker-icon.png"; sourceTree = "<group>"; };
+		5A6EA7181FE09A86009B747A /* TruckInFrontofBuilding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TruckInFrontofBuilding.jpg; sourceTree = "<group>"; };
 		5AF9127B1FCF347900CEBFF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5AF9127D1FCF39C200CEBFF8 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		5D09A87C1FABFC1C002B47D2 /* MidtermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidtermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +75,6 @@
 		5D09A8AB1FACBC5E002B47D2 /* ContactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		5D09A8AD1FACBC7D002B47D2 /* CompanyContacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyContacts.json; sourceTree = "<group>"; };
 		5DD438B41FB0167A006C462B /* Junior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Junior.jpg; sourceTree = SOURCE_ROOT; };
-		5DD438B61FB01CD6006C462B /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
 		5DD438B81FB01DEF006C462B /* TerminalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalsViewController.swift; sourceTree = "<group>"; };
 		5DD438BA1FB01E14006C462B /* icons8-usa-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-usa-map.png"; sourceTree = "<group>"; };
 		5DD438BC1FB01F49006C462B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MidtermProject/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -152,13 +150,12 @@
 		5A2D332E1FACE77300E9D2B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5A27B1D81FE06BFA00770AE6 /* mappies.tiff */,
 				5D09A8A11FAC1606002B47D2 /* addressBook.png */,
-				5A27B1DA1FE06C6100770AE6 /* if_User_Interface-22_2044266.icns */,
-				5A27B1DC1FE06CAE00770AE6 /* if_User_Interface-22_2044266.icns */,
-				5DD438B61FB01CD6006C462B /* map-pin.png */,
 				5D09A8A31FAC1615002B47D2 /* addList.png */,
 				5DD438BA1FB01E14006C462B /* icons8-usa-map.png */,
+				5A6EA7181FE09A86009B747A /* TruckInFrontofBuilding.jpg */,
+				5A6EA7141FE0993C009B747A /* icons8-map-marker-100.png */,
+				5A6EA7161FE09A2E009B747A /* map-marker-icon.png */,
 				5DD438B41FB0167A006C462B /* Junior.jpg */,
 				5D09A89F1FAC15A8002B47D2 /* icons8-home-3.png */,
 				5D09A8971FAC0A29002B47D2 /* finkle trucking.jpg */,
@@ -270,16 +267,15 @@
 			files = (
 				5AF9127C1FCF347900CEBFF8 /* GoogleService-Info.plist in Resources */,
 				5D09A88A1FABFC1C002B47D2 /* LaunchScreen.storyboard in Resources */,
-				5A27B1D91FE06BFB00770AE6 /* mappies.tiff in Resources */,
-				5A27B1DD1FE06CAE00770AE6 /* if_User_Interface-22_2044266.icns in Resources */,
 				5DD438BB1FB01E15006C462B /* icons8-usa-map.png in Resources */,
-				5A27B1DB1FE06C6100770AE6 /* if_User_Interface-22_2044266.icns in Resources */,
+				5A6EA7151FE0993E009B747A /* icons8-map-marker-100.png in Resources */,
 				5D09A8871FABFC1C002B47D2 /* Assets.xcassets in Resources */,
 				5D09A8AE1FACBC7D002B47D2 /* CompanyContacts.json in Resources */,
 				5DD438B51FB0167A006C462B /* Junior.jpg in Resources */,
+				5A6EA7171FE09A2F009B747A /* map-marker-icon.png in Resources */,
+				5A6EA7191FE09A87009B747A /* TruckInFrontofBuilding.jpg in Resources */,
 				5D09A8A01FAC15A8002B47D2 /* icons8-home-3.png in Resources */,
 				5D09A8981FAC0A29002B47D2 /* finkle trucking.jpg in Resources */,
-				5DD438B71FB01CD6006C462B /* map-pin.png in Resources */,
 				5DD438BD1FB01F49006C462B /* Info.plist in Resources */,
 				5D09A8851FABFC1C002B47D2 /* Main.storyboard in Resources */,
 				5D09A8A41FAC1615002B47D2 /* addList.png in Resources */,

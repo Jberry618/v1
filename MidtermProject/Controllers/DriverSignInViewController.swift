@@ -5,7 +5,6 @@
 //  Created by Joshua T. Berry on 12/6/17.
 //  Copyright © 2017 Monmouth University. All rights reserved.
 //
-
 import UIKit
 import CoreLocation
 import MapKit
@@ -14,10 +13,14 @@ import FirebaseDatabase
 
 class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
+
+    let authStatus = CLLocationManager.authorizationStatus()
+    let inUse = CLAuthorizationStatus.authorizedWhenInUse
+    let always = CLAuthorizationStatus.authorizedAlways
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var labelLatitude: UILabel!
-    @IBOutlet weak var labelLongitude: UILabel!
+    @IBOutlet weak var locationAddress: UILabel!
+    @IBOutlet weak var driverName: UITextField!
     
     let locationManager = CLLocationManager()
     
@@ -25,13 +28,12 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     @IBOutlet weak var backButton: UIBarButtonItem!
     
     @IBAction func backPressed(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Homepage")
+        self.present(vc!, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelLatitude.text = ""
-        labelLongitude.text = ""
         
         // We will not be using always authorization because this is a one-time sign in and should only happen when the app is open.
         locationManager.requestAlwaysAuthorization()
@@ -48,7 +50,7 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         mapView.showsUserLocation = true
     }
         // Do any additional setup after loading the view.
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,34 +68,47 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
     }
     
     @IBAction func signIn(_ sender: AnyObject) {
-        var ref: DatabaseReference!
+        let geoCoder = CLGeocoder()
+        let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
         
-        ref = Database.database().reference()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
+        geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            let user = Auth.auth().currentUser
+            guard let addressDict = placemarks?[0].addressDictionary else {
+                return
+            }
+            
+            // Print each key-value pair in a new row
+            addressDict.forEach { print($0) }
+            
+            // Print fully formatted address
+            if let formattedAddress = addressDict["FormattedAddressLines"] as? [String] {
+                ref?.child("users").child(self.driverName.text!).setValue(formattedAddress)
+            }
+            
+            // Access each element manually
+            if let locationName = addressDict["Name"] as? String {
+//                print(locationName)
+                  self.locationAddress.text = locationName
+            }
+        })
+        if (authStatus == inUse ||
+            authStatus == always)
         {
             let latitude = locationManager.location?.coordinate.latitude
             let longitude = locationManager.location?.coordinate.longitude
             print("Longitude: ", longitude!)
             print("Latitude:", latitude!)
-            labelLatitude.text = ""
-            labelLongitude.text = ""
         } else {
-            labelLatitude.text = "Location not authorized"
-            labelLongitude.text = "Location not authorized"
+            locationAddress.text = "Location not authorized"
         }
         
-        ref?.child("Location").childByAutoId().setValue(locationManager.location?.coordinate.latitude)
+    
+        
     }
-    
-    
-    // If we have been deined access give the user the option to change it
+    //if denied access
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if(status == CLAuthorizationStatus.denied) {
             showLocationDisabledPopUp()
@@ -118,34 +133,6 @@ class DriverSignInViewController: UIViewController, MKMapViewDelegate, CLLocatio
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-    
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-//
-//            if (error != nil) {
-//                print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
-//                return
-//            }
-//
-//            if (placemarks?.count)! > 0 {
-//
-//                print("placemarks",placemarks!)
-//                let pm = placemarks?[0]
-//                self.displayLocationInfo(pm)
-//            } else {
-//                print("Problem with the data received from geocoder")
-//            }
-//        })
-//    }
-//
-    
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        print("Error while updating location " + error.localizedDescription)
-//    }
-//}
 
     func OkAlert (withTitle title: String, andMessage message: String ) {
         let alert = UIAlertController(title: title , message: message, preferredStyle: .actionSheet)

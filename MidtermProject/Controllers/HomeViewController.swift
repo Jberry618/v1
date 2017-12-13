@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var logout: UIBarButtonItem!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var switchView: UIView!
     
@@ -50,7 +51,14 @@ class HomeViewController: UIViewController {
         displayCurrentTab(sender.selectedSegmentIndex)
         
     }
-    
+    @IBAction func logoutTouched(_ sender: AnyObject) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
